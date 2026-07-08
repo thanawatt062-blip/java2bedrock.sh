@@ -3,16 +3,10 @@ on:
   issues:
     types:
       - labeled
-  workflow_dispatch:
-    inputs:
-      pack_url:
-        description: 'URL ของ Resource Pack (จาก Dropbox)'
-        required: true
-        default: 'https://www.dropbox.com/scl/fi/y4kysc5p8i1gmf2ecai9c/pack.zip?rlkey=vo20wc2vnfus1jois656fzws5&st=16s9y6km&dl=1'
 
 jobs:
   get-pack-info:
-    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'conversion'
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions: 
       issues: read
