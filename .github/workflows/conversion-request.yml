@@ -7,7 +7,6 @@ on:
 
 jobs:
   get-pack-info:
-    runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'conversion'
     runs-on: ubuntu-latest
     permissions: 
